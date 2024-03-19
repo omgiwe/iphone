@@ -216,9 +216,28 @@ text-align: left;
     flex-grow: 1;
 }
 
+.menu-btn{
+    display: none;
+}
+
 @media (max-width: 1200px){
     .headline-img{
         max-width: 100%;
+    }
+    .contacts-inner{
+        display: block;
+    }
+    .contacts-form{
+        width: auto;
+    }
+    .contact-title{
+        text-align: center;
+    }
+    .contacts-img{
+        width: 100%;
+    }
+    .contacts{
+        background-color: #574B63;
     }
 }
 
@@ -233,6 +252,38 @@ text-align: left;
 }
 
 @media (max-width: 940px){
+    .menu-btn{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        order: 1;
+        position: relative;
+    }
+    .btn-line{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        height: 2px;
+    }
+    .btn-line:nth-child(1){
+        top: 0;
+    }
+    .btn-line:nth-child(2){
+        top: 20px;
+    }
+    .btn-line:nth-child(3){
+        top: 20px;
+    }
+    .btn-line:nth-child(4){
+        top: 40px;
+    }
+    .menu{
+        display: none;
+    }
     .new-img{
         display: none;
     }
@@ -240,9 +291,34 @@ text-align: left;
     .new-text b {
         max-width: 100%;
     }
+    .phone{
+        text-align: center;
+    }
 }
 
-/* @media (max-width: 560px){
+@media (max-width: 768px){
+    .headline, .new{
+        padding: 50px 0;
+    }
+    .color{
+        padding-bottom: 50px;
+    }
+    .contacts-form{
+        padding: 50px 70px;
+    }
+}
+
+@media (max-width: 640px){
+    .footer-inner{
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .footer-inner .logo{
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 560px){
     .title{
     font-size: 34px;
     line-height: 42px;
@@ -253,7 +329,8 @@ text-align: left;
         padding: 16px 90px;
     }
     .new-title, 
-    .color-title {
+    .color-title,
+    .contact-title {
         font-size: 28px;
         line-height: 32px;
     }
@@ -261,6 +338,15 @@ text-align: left;
     .color-item img{
         width: 100%;
     }
-} */
+    .contacts-form{
+        padding: 50px 30px;
+    }
+} 
 
+@media (max-width: 375px){
+    .contacts-form{
+        padding: 50px 10px;
+    }
+
+}
 
