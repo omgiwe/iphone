@@ -261,6 +261,11 @@ text-align: left;
         cursor: pointer;
         order: 1;
         position: relative;
+        z-index: 50;
+    }
+    .logo, .phone{
+        position: relative;
+        z-index: 50;
     }
     .btn-line{
         position: absolute;
@@ -268,6 +273,7 @@ text-align: left;
         width: 100%;
         background-color: #fff;
         height: 2px;
+        transition: .3s ease;
     }
     .btn-line:nth-child(1){
         top: 0;
@@ -281,8 +287,39 @@ text-align: left;
     .btn-line:nth-child(4){
         top: 40px;
     }
+    .menu-open .btn-line:nth-child(1){
+        transform: scaleX(0);
+    }
+    .menu-open .btn-line:nth-child(2){
+        transform: rotate(45deg);
+    }
+    .menu-open .btn-line:nth-child(3){
+        transform: rotate(-45deg);
+    }
+    .menu-open .btn-line:nth-child(4){
+        transform: scaleX(0);
+    }
     .menu{
-        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #0A0A0A;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: .3s ease;
+    }
+    .menu-open .menu{
+        transform: translateY(0%);
+    }
+    .menu-item{
+        padding:50px 0;
+        font-size: 40px;
+
     }
     .new-img{
         display: none;
@@ -342,6 +379,21 @@ text-align: left;
         padding: 50px 30px;
     }
 } 
+
+@media (max-width: 420px){
+    .nav{
+        flex-wrap: wrap;
+    }
+    .phone{
+        flex-basis: auto;
+        margin-top: 50px;
+        order: 3;
+        width: 100%;
+    }
+    .menu-item{
+        font-size: 32px;
+    }
+}
 
 @media (max-width: 375px){
     .contacts-form{
